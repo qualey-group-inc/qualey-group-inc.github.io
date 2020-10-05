@@ -436,8 +436,9 @@ function countdown(){
 	
 	var mytz = 0;
 	let tz = new Date().getTimezoneOffset()/-60;
-	const tzmin = 2;
-	const tzmax = 4;
+	const tzmin = -4;
+	const tzmax = -8;
+	alert(tz);
 	if (tz >= tzmin && tz <= tzmax) {
 		var mytz = 1;
 	}
