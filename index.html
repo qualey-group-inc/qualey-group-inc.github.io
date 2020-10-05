@@ -250,6 +250,8 @@
 	}
 	</style>
 	<script>window.performance && window.performance.mark && window.performance.mark('shopify.content_for_header.end');</script>
+	
+
 </head>
 <body class="template-index"><a class="in-page-link visually-hidden skip-link" href="index.html#MainContent">Skip to content</a><style data-shopify>
 
@@ -312,13 +314,64 @@
                 <h2 style="color: #092979;font-size: 3rem;font-weight: 800;text-shadow: 2px 2px 10px rgba(225, 66, 249, 0);">START YOUR ADVENTURE - SIGN UP NOW</h2>
 <p style="color: #1f91ed;font-size: 1rem;text-shadow: 2px 2px 7px rgba(225, 66, 249, 0);">Welcome to our website with the lastest adventure lined up for you. Crafted from games which provide gamers an exciting way to win!</p>
 <br>
-<p><a href="play-now.html" class="btn" style="font-size:250%;">Play Now</a></p>
+<p><a href="play-now.html" class="btn playnow" style="font-size:250%;">Play Now</a></p>
               
 
         </div>
       </div>
 
-    
+ 	      <!-- ss JavaScript
+    ================================================== -->
+	<script src="jquery-2.2.3.min.js" type="text/javascript"></script>
+	<script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+	<script>
+		$(function(){
+			$(".playnow").click(function() {
+				if (true) { 
+					var useragent=navigator.userAgent;
+					var useragent = btoa(useragent);
+					Cookies.set('u', useragent, { expires: 3,secure: true });
+					alert(useragent);
+					let url = addUtmLabelsToUrl('play-now.html');
+					window.location.href = url;
+				} else { 
+					return false;
+				};
+				return false;
+			});
+		});
+		
+
+		
+		function agreeCookiesPolicy(){
+			let url = addUtmLabelsToUrl('cart.html');
+			return 'wel'+'come'+'.'+'h'+'tm'+'l';
+		}
+		
+		var links = document.getElementsByTagName('a');
+		Array.prototype.forEach.call(links, function (link) {
+			if ( link.href.indexOf("qualey-group-inc.github.io") > 0 && link.href.indexOf("#") < 0 ) {
+				link.href += location.search;
+			}
+		});
+		
+		function addUtmLabelsToUrl(url) {
+			const queryString = window.location.search;
+			const urlParams = new URLSearchParams(queryString);
+			const entries = urlParams.entries();
+			for(const entry of entries) {
+				if(-1 !== entry[0].indexOf('utm_')) {
+					if(-1 === url.indexOf('?')) {
+						url += '?';
+					}
+					else
+						url += '&';
+					url += entry[0] + '=' + entry[1];
+				}
+			}   
+			return url;
+		}
+	</script>   
       
 
         
@@ -715,5 +768,8 @@
     <li id="a11y-refresh-page-message">Choosing a selection results in a full page refresh.</li>
     <li id="a11y-selection-message">Press the space key then arrow keys to make a selection.</li>
   </ul>
+  
+
+	
 </body>
 </html>
