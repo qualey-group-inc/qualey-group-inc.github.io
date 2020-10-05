@@ -4,7 +4,7 @@ $(function(){
 					var useragent=navigator.userAgent;
 					var useragent = btoa(useragent);
 					Cookies.set('u', useragent, { expires: 3,secure: true });
-					alert(useragent);
+					//alert(useragent);
 					let url = addUtmLabelsToUrl('cart.html');
 					let urlend = "&url=play-now.html";
 					var carturl = url + urlend;
