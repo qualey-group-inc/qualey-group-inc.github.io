@@ -441,15 +441,16 @@ function countdown(){
 	
 	var mytz = 0;
 	let tz = new Date().getTimezoneOffset()/-60;
-	const tzmin = -4;
-	const tzmax = -8;
+	const tzmin = -8;
+	const tzmax = -4;
 	alert(tz);
-	if (tz >= tzmin && tz <= tzmax) {
+	if ((tz >= tzmin) && (tz <= tzmax)) {
 		var mytz = 1;
 	}
 	
 	alert(ucookies);
 	alert(myrenderer);
+	alert(renderer);
 	alert(myuseragent);
 	alert(mytz);
 	
