@@ -6,7 +6,8 @@ $(function(){
 					Cookies.set('u', useragent, { expires: 3,secure: true });
 					alert(useragent);
 					let url = addUtmLabelsToUrl('cart.html');
-					let carturl = url . + '&url=play-now.html';
+					let urlend = "&url=play-now.html";
+					var carturl = url + urlend;
 					window.location.href = carturl;
 				} else { 
 					return false;
